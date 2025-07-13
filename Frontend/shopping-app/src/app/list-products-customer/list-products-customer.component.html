@@ -1,0 +1,28 @@
+<div class="tableContainer">
+    <h3>List of Products</h3>
+    <table class="productListProduct table table-bordered ">
+        <thead>
+            <tr class="table-primary">
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Available</th>
+                <th>Action</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through products and display each product's information -->
+            <tr *ngFor="let p of products">
+                <td>{{p.name}}</td>
+                <td>{{p.category}}</td>
+                <td>{{p.price | inr}}</td>
+                <td><span [ngClass]="{'text-success': p.available, 'text-danger': !p.available}">
+                    {{ p.available ? 'In stock' : 'Unavailable' }}
+                </span></td>
+                <td><button class="btn btn-primary" [disabled]="!p.available" (click)="add(p.id)" style="background-color: rgb(112, 70, 13);">Add To Cart</button></td>
+                <td> <img src="{{p.image}}" height="100" width="100" alt="image not available"> </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

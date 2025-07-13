@@ -1,0 +1,55 @@
+package com.capstone.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.capstone.model.Product;
+import com.capstone.repo.ProductRepository;
+
+@Service
+public class ProductServiceImpl implements ProductService {
+	
+	@Autowired
+	private ProductRepository repo;
+	
+	@Override
+	public void add(Product p) {
+		repo.save(p);
+	}
+
+	@Override
+	public Product find(int pid) {
+		return repo.findById(pid).get();
+	}
+
+	@Override
+	public List<Product> listAll() {
+		return repo.findAll();
+	}
+
+	@Override
+	public void delete(int pid) {
+		repo.deleteById(pid);
+	}
+
+	@Override
+	public void listByCategory(String category) {
+		repo.findByCategory(category);
+	}
+
+	@Override
+	public void update(int pid, Product p) {
+		  Product product = repo.findById(pid).orElse(null);
+
+	        if (product != null) {
+
+	            product.setPid(p.getPid());
+
+	            product.setName(p.getName());
+
+	            repo.save(product);
+	}
+}
+}

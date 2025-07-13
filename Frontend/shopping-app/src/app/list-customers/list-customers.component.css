@@ -1,0 +1,12 @@
+.tableContainer {
+    padding: 20px;
+    /* Use flexbox to center content both horizontally and vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.customerListProduct tr:nth-child(odd) {
+     /* Apply a background color to odd-numbered rows for better readability */
+    background-color: #efefef;
+}

@@ -1,0 +1,30 @@
+<!-- Container for the cart table -->
+<div class="tableContainer">
+    <h2>Your Cart</h2>
+    <br>
+    <table class="productListProduct table table-bordered table-light">
+        <thead>
+            <tr class="table-primary">
+                <th>Id</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Image</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through the cart items and display each product -->
+            <tr *ngFor="let c of cart">
+                <td>{{c.product.id}}</td>
+                <td>{{ c.product.name }}</td>
+                <td>{{ c.product.category}}</td>
+                <td>{{ c.product.price | inr}}</td>
+                <!-- Display product image with a fallback message if image is not available -->
+                <td><img src="{{c.product.image}}" height="100" width="100" alt="image not available"></td>
+                <!-- Button to delete the product from the cart -->
+                <td><button (click)="delete(c.cart.cid)" class="btn btn-danger">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,6 @@
+com.capstone
+com.capstone.entity
+com.capstone.exception
+com.capstone.repo
+com.capstone.rest
+com.capstone.service

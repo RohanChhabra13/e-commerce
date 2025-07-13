@@ -1,0 +1,24 @@
+<div class="tableContainer">
+    <table class="customerListProduct table table-bordered">
+        <thead>
+            <tr class="table-primary">
+                <th>Customer ID</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Password</th>
+                <th>Emailb</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through customers and display each customer's information -->
+            <tr *ngFor="let c of customers">
+                <td>{{ c.custid }}</td>
+                <td>{{ c.name }}</td>
+                <td>{{ c.mobile }}</td>
+                <!--<td>{{ c.password | password : '#'}}</td>-->
+                <td>{{ c.password |password }}</td>
+                <td>{{ c.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

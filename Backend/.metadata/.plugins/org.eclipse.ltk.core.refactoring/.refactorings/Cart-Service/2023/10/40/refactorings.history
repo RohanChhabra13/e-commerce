@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.capstone.vo.ProductTemplate&apos; to &apos;Product&apos;&#x0D;&#x0A;- Original project: &apos;Cart-Service&apos;&#x0D;&#x0A;- Original element: &apos;com.capstone.vo.ProductTemplate&apos;&#x0D;&#x0A;- Renamed element: &apos;com.capstone.vo.Product&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ProductTemplate&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.capstone.vo{ProductTemplate.java[ProductTemplate" matchStrategy="1" name="Product" qualified="false" references="true" similarDeclarations="false" stamp="1696502350557" textual="false" version="1.0"/>
+</session>

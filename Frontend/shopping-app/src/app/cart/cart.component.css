@@ -1,0 +1,20 @@
+/* Styling for the container of the cart table */
+.tableContainer {
+    padding: 20px;
+    /* Use flexbox to align content vertically and horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+}
+
+/* Styling for the table header row */
+.productListProduct thead {
+    background-color: aqua;
+}
+
+.productListProduct tr:nth-child(odd) {
+    /* Background color for odd-numbered rows */
+    background-color: #efefef;
+}

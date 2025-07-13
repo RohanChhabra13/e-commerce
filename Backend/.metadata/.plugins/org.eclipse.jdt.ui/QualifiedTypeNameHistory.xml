@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.capstone.ProductServiceApplication"/>
+    <fullyQualifiedTypeName name="com.capstone.model.Product"/>
+    <fullyQualifiedTypeName name="junit.framework.Assert"/>
+    <fullyQualifiedTypeName name="com.capstone.exception.ProductNotFound"/>
+    <fullyQualifiedTypeName name="antlr.collections.List"/>
+    <fullyQualifiedTypeName name="org.springframework.test.context.junit4.SpringRunner"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.Optional"/>
+    <fullyQualifiedTypeName name="org.mockito.Mockito"/>
+    <fullyQualifiedTypeName name="com.capstone.service.CartServiceImpl"/>
+    <fullyQualifiedTypeName name="com.capstone.repo.CartRepository"/>
+    <fullyQualifiedTypeName name="com.capstone.entity.Cart"/>
+    <fullyQualifiedTypeName name="com.capstone.vo.Product"/>
+    <fullyQualifiedTypeName name="org.springframework.core.ParameterizedTypeReference"/>
+    <fullyQualifiedTypeName name="com.capstone.vo.CartTemplate"/>
+    <fullyQualifiedTypeName name="org.junit.Test"/>
+    <fullyQualifiedTypeName name="com.capstone.CustomerServiceApplication"/>
+</qualifiedTypeNameHistroy>

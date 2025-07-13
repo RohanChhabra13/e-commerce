@@ -1,0 +1,27 @@
+<div class="Container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h4>Register</h4>
+            <form (ngSubmit)="save()" class="was-validated">
+                <br>
+                Customer ID:
+                <input name="custid" [(ngModel)]="c.custid" required pattern="[0-9]{4,}" class="form-control">
+                <br>
+                Customer Name:
+                <input name="name" [(ngModel)]="c.name" required pattern="[A-Z][a-z]{3,}" class="form-control">
+                <br>
+                Customer Phone No:
+                <input name="mobile" [(ngModel)]="c.mobile" required pattern="[6-9][0-9]{9}" class="form-control">
+                <br>
+                Customer Password:
+                <input type="password" name="c.password" [(ngModel)]="c.password" required pattern="[A-Za-z0-9]{3,}" class="form-control">
+                <br>
+                Customer Email:
+                <input name="email" [(ngModel)]="c.email" required class="form-control">
+                <br>
+                <button type="submit" class="btn btn-primary"
+                    style="background-color: rgb(112, 70, 13);">Register</button>
+            </form>
+        </div>
+    </div>
+</div>

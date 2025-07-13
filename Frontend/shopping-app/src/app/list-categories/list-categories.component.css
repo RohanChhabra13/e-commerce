@@ -1,0 +1,12 @@
+.tableContainer {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+}
+
+.productListProduct tr:nth-child(odd) {
+    background-color: #efefef;
+}

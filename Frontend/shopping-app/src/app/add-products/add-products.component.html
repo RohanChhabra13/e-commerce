@@ -1,0 +1,53 @@
+<div class="addProduct">
+    <!-- Center the content in a row -->
+    <div class="row justify-content-center">
+        <!-- Create a column for the form -->
+        <div class="col-md-6">
+            <!-- Form title -->
+            <h4 class="text-center">Add Product</h4>
+            <!-- Product information form -->
+            <form (ngSubmit)="save()" class="was-validated">
+                <!-- Product ID input -->
+                <div class="form-group">
+                    <label for="id">Product Id:</label>
+                    <input name="id" [(ngModel)]="p.id" required pattern="[0-9]{3,}" class="form-control" id="id">
+                </div>
+                <!-- Product Name input -->
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input name="name" [(ngModel)]="p.name" required pattern="^[a-zA-Z]+(\s[a-zA-Z]+)?$"
+                        class="form-control" id="name">
+                </div>
+                <!-- Product Category select -->
+                <div class="form-group">
+                    <label for="category">Category:</label>
+                    <select name="category" [(ngModel)]="p.category" required class="form-control" id="category">
+                        <option *ngFor="let c of cat" [value]="c">{{ c }}</option>
+                    </select>
+                </div>
+                <!-- Product Price input -->
+
+                <div class="form-group">
+                    <label for="price">Price:</label>
+                    <input name="price" [(ngModel)]="p.price" required pattern="[1-9][0-9]{1,}" class="form-control"
+                        id="price">
+                </div>
+                <!-- Product Image input -->
+                <div class="form-group">
+                    <label for="image">Image:</label>
+                    <input name="image" [(ngModel)]="p.image" required class="form-control" id="image">
+                </div>
+                <!-- Product Availability input -->
+                <div class="form-group">
+                    <label for="available">Availability:</label>
+                    <input name="available" [(ngModel)]="p.available" required class="form-control" id="available">
+                </div>
+                <!-- Form submission button -->
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary" style="background-color: rgb(112, 70, 13);">Save
+                        Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+.tableContainer {
+    padding: 20px;
+    /* Use flexbox to center content both horizontally and vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+}
+
+.productListProduct tr:nth-child(odd) {
+    /* Apply a background color to odd-numbered rows for better readability */
+    background-color: #efefef;
+}

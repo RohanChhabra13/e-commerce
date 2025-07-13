@@ -1,0 +1,15 @@
+package com.capstone.service;
+
+import java.util.List;
+
+import com.capstone.model.Product;
+
+public interface ProductService {
+	
+	void add (Product p);
+	Product find(int pid);
+	List <Product> listAll();
+	void delete (int pid);
+	void listByCategory(String category);
+	void update(int pid,Product p);
+}

@@ -1,0 +1,35 @@
+<div class="tableContainer">
+    <table class="productListProduct table table-bordered">
+        <thead>
+            <tr class="table-primary" >
+                <th >Product Id</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Available</th>
+                <th>Image</th>
+                <th>Delete</th>
+                <th>Update</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through products and display each product -->
+            <tr *ngFor="let p of products,let id = index">
+                <td>{{ p.id }}</td>
+                <td>{{ p.name }}</td>
+                <td>{{ p.category }}</td>
+                <td>{{ p.price | inr }}</td>
+                <td><span [ngClass]="{'text-success': p.available, 'text-danger': !p.available}">
+                    {{ p.available ? 'In stock' : 'Unavailable' }}
+                </span></td>
+                <td><img src="{{p.image}}" height="100" width="100"></td>
+                <!--<td><button class="btn btn-danger" (click)="delete(p.id)">Delete</button></td>-->
+                <td><button (click)="delete(p.id)" class="btn btn-danger"><i
+                            class="bi bi-trash"></i>Delete</button></td>
+                <!-- <td><button class="btn btn-primary" href="/customer-dash/update">Update</button></td> -->
+                <td><a class="btn btn-primary" href="/admin-dash/update" (click)="update(p)" role="button">Update</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
